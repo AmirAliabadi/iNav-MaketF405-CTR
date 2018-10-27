@@ -1,0 +1,9 @@
+Default DJI GPS puck pointing forward is set with CW180FLIP, but can be changed with CW0FLIP, CW90FLIP, CW180FLIP or CW270FLIP
+
+
+CW180FLIP, 
+
+
+TRY CW270FLIP
+
+set align_mag = CW270FLIP
