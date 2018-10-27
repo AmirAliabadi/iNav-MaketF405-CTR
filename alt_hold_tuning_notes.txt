@@ -1,0 +1,34 @@
+nav_use_midthr_for_althold  ON/OFF
+nav_mc_hover_thr 1300-1500
+
+
+I am not sure about iNav's filtering settings for the baro, maybe it is over filtered. I am using an SPR F3 EVO (bmp280) without covering the barometer (it is the quad on my avatar) it hovers at 1300 throttle, and althold worked for me with default pids, with use_midthr_for_althold both ON and OFF. I also got a punch out because I forgot to set my hover throttle first  Also, I changed the gyro filter settings to suit a racing quad:
+
+set async_mode = NONE #do not use async unless it is an acro only quad. It is bad for navigation features.
+set gyro_sync = ON
+set gyro_lpf = 188HZ
+set gyro_soft_lpf_hz = 70
+set acc_soft_lpf_hz = 10 # I think this one has a great impact on althold stability
+set dterm_lpf_hz = 80
+set yaw_lpf_hz = 70
+
+and the Betaflight default pids for roll, pitch and yaw. These worked just fine with iNav as well on my quad.
+R 43 40 20
+P 58 50 22
+Y 70 45 0
+
+I listened to your video again and I noticed an oscillating sound when it started ascending. Not sure if that was from roll/pitch or d_vel.
+If you want to tune althold pids from scratch, start like this:
+
+First get nav_mc_hover_thr right. If you activate althold and it drops, raise the value. 
+If it jumps, lower it.
+then set nav_alt_p = 20, set nav_vel_i = 20 and nav_vel_d = 1. 
+Raise nav_vel_p until you get the pogo effect, then raise nav_vel_d in an attempt to dampen it. 
+If it gets better, repeat. If you hear oscillating sound, you have reached your maximum value for 
+vel P and D. Turn down D until you do not hear the oscillation sounds, and turn down P until it 
+doesn't pogo.
+
+Alternatively, see if you can get nav_vel_d up to 10 without oscillations (you will hear them), then try if you can get nav_vel_p up to 100 without pogo.
+Then raise nav_vel_I up to around 50. At this point it should hold altitude reasonably well. If you get slow, agressive pogo before 50, you have found maximum value for I. After you have vel pids tuned, raise nav_alt_p to 50 or the maximum value that works for you.
+Setting any of these values too high will result in excessive power consumption and shorter flight times (especially nav_vel_d)
+Hope this helps!
