@@ -1,0 +1,160 @@
+# version
+# INAV/MATEKF405 2.0.1 Oct 31 2018 / 19:24:04 (a04e68aaa)
+
+# resources
+
+# mixer
+mmix 0  1.000 -1.000  1.000 -1.000
+mmix 1  1.000 -1.000 -1.000  1.000
+mmix 2  1.000  1.000  1.000  1.000
+mmix 3  1.000  1.000 -1.000 -1.000
+
+# servo mix
+
+# servo
+
+# feature
+feature SOFTSERIAL
+feature GPS
+feature LED_STRIP
+feature BLACKBOX
+feature PWM_OUTPUT_ENABLE
+
+# beeper
+
+# map
+map TAER
+
+# serial
+serial 2 4096 115200 38400 0 115200
+serial 3 2 115200 38400 0 115200
+serial 31 32 115200 38400 0 115200
+
+# led
+led 0 13,13::G:0
+led 1 15,15::CN:6
+led 2 15,0::CBW:2
+led 3 13,2::AW:2
+led 4 2,2::AW:2
+led 5 0,0::CBW:2
+led 6 0,15::CN:6
+led 7 2,13::G:0
+
+# color
+
+# mode_color
+mode_color 6 0 0
+mode_color 6 1 2
+
+# aux
+aux 0 0 0 1700 2100
+aux 1 1 0 900 2100
+aux 2 4 3 1700 2100
+aux 3 3 3 1300 2100
+aux 4 9 3 1700 2100
+aux 5 17 0 1700 2100
+
+# adjrange
+adjrange 0 0 1 900 1250 6 2
+adjrange 1 0 1 1325 1675 7 2
+adjrange 2 0 1 1725 2100 8 2
+
+# rxrange
+
+# osd_layout
+osd_layout 0 1 1 0 V
+osd_layout 0 7 23 1 V
+osd_layout 0 9 11 4 V
+osd_layout 0 10 0 10 V
+osd_layout 0 11 1 1 V
+osd_layout 0 12 1 2 V
+osd_layout 0 14 12 11 V
+osd_layout 0 15 23 4 V
+osd_layout 0 20 19 11 V
+osd_layout 0 21 1 11 V
+osd_layout 0 22 14 0 V
+osd_layout 0 24 12 2 V
+osd_layout 0 25 22 5 V
+osd_layout 0 28 23 9 V
+osd_layout 0 30 0 12 V
+osd_layout 0 33 1 4 V
+osd_layout 0 34 10 2 H
+osd_layout 0 38 7 0 V
+osd_layout 0 48 12 0 H
+osd_layout 0 50 7 12 H
+
+# master
+set gyro_sync = ON
+set gyro_hardware_lpf = 188HZ
+set gyro_lpf_hz = 70
+set gyro_notch1_hz = 130
+set gyro_notch1_cutoff = 110
+set gyro_notch2_hz = 68
+set gyro_notch2_cutoff = 48
+set acc_hardware = MPU6000
+set acczero_x = 19
+set acczero_y = -21
+set acczero_z = -112
+set accgain_x = 4072
+set accgain_y = 4071
+set accgain_z = 4031
+set align_mag = CW270FLIP
+set mag_hardware = HMC5883
+set mag_declination = 1540
+set magzero_x = -30
+set magzero_y = -171
+set magzero_z = 6
+set baro_hardware = BMP280
+set pitot_hardware = NONE
+set rssi_channel = 16
+set sdcard_detect_inverted = ON
+set failsafe_procedure = DROP
+set align_board_roll = -10
+set align_board_pitch = -3
+set current_meter_scale = 177
+set model_preview_type = 3
+set 3d_neutral = 1500
+set gps_ublox_use_galileo = ON
+set inav_w_z_baro_p =  0.500
+set nav_user_control_mode = CRUISE
+set nav_mc_hover_thr = 1400
+set smartport_fuel_unit = PERCENT
+set osd_video_system = NTSC
+set osd_units = IMPERIAL
+set debug_mode = GYRO
+set async_mode = GYRO
+set name = matek-f405-ctr
+set vtx_band = 1
+set vtx_low_power_disarm = UNTIL_FIRST_ARM
+set vtx_freq = 5865
+
+# profile
+profile 1
+
+set mc_p_pitch = 50
+set mc_d_pitch = 60
+set mc_p_roll = 50
+set mc_d_roll = 60
+set nav_mc_pos_z_p = 100
+set nav_mc_vel_z_p = 200
+set nav_mc_vel_z_i = 40
+set nav_mc_vel_z_d = 50
+set nav_mc_pos_xy_p = 30
+set nav_mc_pos_xy_i = 60
+set nav_mc_pos_xy_d = 5
+set nav_mc_vel_xy_p = 20
+set nav_mc_vel_xy_i = 5
+set nav_mc_vel_xy_d = 50
+set thr_mid = 45
+set thr_expo = 85
+set roll_rate = 40
+set pitch_rate = 40
+
+# battery_profile
+battery_profile 1
+
+set battery_capacity = 5300
+set battery_capacity_warning = 3180
+set battery_capacity_critical = 2650
+
+# 

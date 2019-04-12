@@ -1,0 +1,42 @@
+set debug_mode = GYRO
+set gyro_sync = ON
+set gyro_hardware_lpf = 256HZ
+
+set gyro_lpf_hz = 70
+set gyro_stage2_lowpass_hz = 0
+set acc_lpf_hz = 15
+set dterm_lpf_hz = 40
+set yaw_lpf_hz = 30
+
+set gyro_notch1_hz = 130
+set gyro_notch1_cutoff = 110
+set gyro_notch2_hz = 68
+set gyro_notch2_cutoff = 48
+
+set dterm_notch_hz = 0
+set dterm_notch_cutoff = 1
+
+set acc_notch_hz = 0
+set acc_notch_cutoff = 1
+
+--------------------
+set debug_mode = GYRO
+set gyro_sync = ON
+set gyro_hardware_lpf = 256HZ
+
+set gyro_lpf_hz = 80
+set gyro_stage2_lowpass_hz = 0
+set acc_lpf_hz = 15
+set dterm_lpf_hz = 56
+set yaw_lpf_hz = 30
+
+set gyro_notch1_hz = 130
+set gyro_notch1_cutoff = 103
+set gyro_notch2_hz = 68
+set gyro_notch2_cutoff = 56
+
+set dterm_notch_hz = 0
+set dterm_notch_cutoff = 1
+
+set acc_notch_hz = 0
+set acc_notch_cutoff = 1
